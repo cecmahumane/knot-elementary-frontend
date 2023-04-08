@@ -6,7 +6,7 @@ export const Test = () => {
   const [serverTest, setServerTest] = React.useState();
 
   const fetchTestData = async () => {
-    const response = await fetch(`${process.env.REACT_APP_ORIGIN}/testRoute/dbtest`, {
+    const response = await fetch(`${process.env.REACT_APP_ORIGIN}/api/testRoute/dbtest`, {
       method: 'GET',
       mode: "cors",
       headers: { 'Content-Type': 'application/json' },
@@ -17,7 +17,7 @@ export const Test = () => {
   }
 
   const fetchTestServerData = async () => {
-    const response = await fetch(`${process.env.REACT_APP_ORIGIN}/testRoute`, {
+    const response = await fetch(`${process.env.REACT_APP_ORIGIN}/api/testRoute`, {
       method: 'GET',
       mode: "cors",
       headers: { 'Content-Type': 'application/json' },
@@ -47,7 +47,7 @@ export const Test = () => {
 
   return (
     <div>
-      <h1 align="center">Test</h1>
+      <h1 align="center">Test data should render below</h1>
       {serverTestDisplay}
       {testDisplay}
     </div>
