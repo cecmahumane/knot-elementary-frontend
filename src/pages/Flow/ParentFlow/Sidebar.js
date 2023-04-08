@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import logo from '../../../assets/logo.png'
+import LogoutButton from "../../../components/LogoutButton";
 
 
 export default function Sidebar() {
@@ -54,6 +55,9 @@ export default function Sidebar() {
                             </Link>
                         </li>
                     </ul>
+                    <div>
+                        <LogoutButton/>
+                    </div>
 
                 </div>
             </div>
