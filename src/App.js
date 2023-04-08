@@ -4,8 +4,11 @@ import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import { useNavigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import Calendar from './pages/calendar'
+
 import Authenticator from './components/Authenticator';
+
+import Calendar from './components/Calendar/calendar'
+
 
 import Admin from './pages/Flow/Admin'
 
@@ -32,10 +35,13 @@ function App() {
       {/* <Profile />
       <Landing /> */}
 
-    {/* <Admin/>
+      {/* <Admin/>
     <Calendar/> */}
+
     {/* {user.email} */}
       
+
+      {isAuthenticated.email}
 
     </>
   );

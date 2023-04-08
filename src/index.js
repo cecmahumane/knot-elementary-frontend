@@ -7,8 +7,8 @@ import './index.css';
 import './global.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Calendar from './pages/calendar'
-
+import Calendar from './components/Calendar/calendar'
+import Comment from './components/Calendar/Comment'
 import Admin from './pages/Flow/Admin'
 import TeacherView from './pages/Flow/TeacherFlow/TeacherView'
 import ParentView from './pages/Flow/ParentFlow/ParentView';
@@ -35,15 +35,25 @@ ReactDOM.render(
         <Routes>
           <Route path='/' element={<App />} />
           <Route path='/admin' element={<UserView />} />
+
           <Route path='/calender' element={<Calendar />} />
           <Route path='/authenticator' element={<Authenticator />} />
           {/* <Route path='/uthenticato' element={<Admin />} /> */}
           <Route path='/teacher/:id' element={<TeacherView />} />
 
-          <Route path='parent/:id' element={<ParentView />}/> 
-          <Route path='parent/:id/:studentId' element={<ChildGrades />}/>
+          
+          <Route path='/calendar/:comments' element={<Comment />} />
 
+          
+          
+          <Route path='/teacher' element={<TeacherView />} />
           <Route path='/teacher/:parentId/:selected' element={<ChildInfo />} />
+
+          <Route path='parent/:id' element={<ParentView />} />
+          <Route path='parent/:id/:studentId' element={<ChildGrades />} />
+
+
+
 
 
         </Routes>
