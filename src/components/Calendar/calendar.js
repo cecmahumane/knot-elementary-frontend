@@ -11,43 +11,51 @@ const mockData = {
     //Attention: month is 0 indexed
     appointments: [
         {
-            start: new Date(2023, 3, 16, 14, 0),
+            appointmentID: '0',
+            start: new Date(2023, 4, 16, 14, 0),
             end: new Date(2023, 4, 16, 14, 30),
             personID: null
         },
         {
-            start: new Date(2023, 3, 16, 14, 30),
-            end: new Date(2023, 3, 16, 15, 0),
+            appointmentID: '1',
+            start: new Date(2023, 4, 16, 14, 30),
+            end: new Date(2023, 4, 16, 15, 0),
             personID: '8888'
         },
         {
-            start: new Date(2023, 3, 16, 15, 0),
-            end: new Date(2023, 3, 16, 15, 30),
+            appointmentID: '2',
+            start: new Date(2023, 4, 16, 15, 0),
+            end: new Date(2023, 4, 16, 15, 30),
             personID: null
         },
         {
-            start: new Date(2023, 3, 16, 15, 30),
-            end: new Date(2023, 3, 16, 16, 0),
+            appointmentID: '3',
+            start: new Date(2023, 4, 16, 15, 30),
+            end: new Date(2023, 4, 16, 16, 0),
             personID: null
         },
         {
-            start: new Date(2023, 3, 17, 14, 0),
-            end: new Date(2023, 3, 17, 14, 30),
+            appointmentID: '4',
+            start: new Date(2023, 4, 17, 14, 0),
+            end: new Date(2023, 4, 17, 14, 30),
             personID: null
         },
         {
-            start: new Date(2023, 3, 17, 14, 30),
-            end: new Date(2023, 3, 17, 15, 0),
+            appointmentID: '5',
+            start: new Date(2023, 4, 17, 14, 30),
+            end: new Date(2023, 4, 17, 15, 0),
             personID: null
         },
         {
-            start: new Date(2023, 3, 17, 15, 0),
-            end: new Date(2023, 3, 17, 15, 30),
+            appointmentID: '6',
+            start: new Date(2023, 4, 17, 15, 0),
+            end: new Date(2023, 4, 17, 15, 30),
             personID: null
         },
         {
-            start: new Date(2023, 3, 17, 15, 30),
-            end: new Date(2023, 3, 17, 16, 0),
+            appointmentID: '7',
+            start: new Date(2023, 4, 17, 15, 30),
+            end: new Date(2023, 4, 17, 16, 0),
             personID: null
         },
     ]
@@ -67,9 +75,10 @@ export default function Calendar({ data = mockData }) {
 
 
     return (
-        <div className="bg-gray-200 h-screen flex flex-col justify-center p-20 gap-y-4 ">
+        <div className="bg-gray-200 h-screen flex flex-col justify-center items-center gap-y-4 ">
 
-            <h1 className="text-center mb-10 font-medium text-2xl">{data.title}</h1>
+            <h1 className="text-center font-medium text-2xl">{data.title}</h1>
+            <h1 className="text-center font-medium text-base">For testing purpose: available dates are on 16th May & 17th May</h1>
             <div className="flex mt-16">
 
 
