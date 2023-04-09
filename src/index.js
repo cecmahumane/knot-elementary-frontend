@@ -50,8 +50,8 @@ ReactDOM.render(
           <Route path='/teacher' element={<TeacherView />} />
           <Route path='/teacher/:parentId/:selected' element={<ChildInfo />} />
 
-          <Route path='parent/:id' element={<ParentView />} />
-          <Route path='parent/:id/:studentId' element={<ChildGrades />} />
+          <Route path='/parent/:id' element={<ParentView />} />
+          <Route path='/parent/:id/:studentId' element={<ChildGrades />} />
           <Route path='/credentials' element={<NoCredentials />} />
 
 
