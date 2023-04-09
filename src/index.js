@@ -17,6 +17,7 @@ import { UserView } from './pages/Flow/Admin/UserView';
 import Authenticator from './components/Authenticator';
 // this is subject to change, it needs to be dynamic
 import ChildInfo from './pages/Flow/TeacherFlow/ChildInfo';
+import NoCredentials from './components/NoCredentials';
 
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
@@ -51,6 +52,7 @@ ReactDOM.render(
 
           <Route path='parent/:id' element={<ParentView />} />
           <Route path='parent/:id/:studentId' element={<ChildGrades />} />
+          <Route path='/credentials' element={<NoCredentials />} />
 
 
 
