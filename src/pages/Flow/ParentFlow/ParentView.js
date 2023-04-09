@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import StudentInfo from './StudentInfo'
+import {nanoid} from 'nanoid'
 
 const ParentView = () => {
   
@@ -26,7 +27,10 @@ const ParentView = () => {
                 <div className="flex-1 my-60 space-y-8">
 
                     {students.map(student => (
-                        <StudentInfo data={student} />
+                        <StudentInfo 
+                            data={student} 
+                            key={nanoid()}
+                        />
                     ))}
 
 
