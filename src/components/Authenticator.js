@@ -34,7 +34,7 @@ const Authenticator = () => {
                 } else if (role === 3) {
                     navigate(`/parent/${personId}`)
                 } else {
-                    
+                    navigate(`/credentials`)
                 }
                 return console.log("User exists in db");
             }
